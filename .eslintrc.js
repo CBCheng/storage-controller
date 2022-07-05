@@ -8,6 +8,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
+  ignorePatterns: ['**/dist/*.js'],
   rules: {
     semi: ['error', 'never'],
     'no-underscore-dangle': 'off',
