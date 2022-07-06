@@ -58,7 +58,7 @@ class StorageController {
     const field = storage[key]
     if (field) return field
 
-    console.error(`Can't find ${this.name} in ${this.storageName}`)
+    console.error(`Can not find ${String(key)} in ${this.name}(${this.storageName}).`)
     return undefined
   }
 
@@ -79,8 +79,7 @@ class StorageController {
     if (!this._checker()) return
 
     if (!this.name) {
-      // eslint-disable-next-line no-console
-      console.error(`Can't find ${this.name} in ${this.storageName}`)
+      console.error(`Can not find ${String(key)} in ${this.name}(${this.storageName}).`)
       return
     }
 
@@ -98,7 +97,7 @@ class StorageController {
       return
     }
 
-    console.error(`Can't find ${this.name} in ${this.storageName}`)
+    console.error(`Can not find ${String(key)} in ${this.name}(${this.storageName}).`)
   }
 }
 
